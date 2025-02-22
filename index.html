@@ -2,12 +2,34 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bikes</title>
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+    <title>Mapbox GL JS Map</title>
     <link rel="stylesheet" href="global.css">
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <!-- Mapbox GL JS CSS -->
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css" rel="stylesheet" />
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center; /* Center horizontally */
+            align-items: center;     /* Center vertically */
+        }
+        #map {
+            width: 100%;    /* Adjust width to your desired size */
+            height: 100%;   /* Adjust height to your desired size */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow for effect */
+            border-radius: 8px; /* Optional: rounded corners */
+        }
+    </style>
 </head>
 <body>
-    <h1>yes</h1>
-    <p>no</p>
+    <div id="map"></div>
+    <!-- Mapbox GL JS JavaScript -->
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
+    <script src="map.js"></script>
 </body>
 </html>
