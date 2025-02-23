@@ -210,7 +210,7 @@ map.on('load', () => {
 
         // Debugging statement to check totalTraffic values
         filteredStations.forEach(station => {
-          console.log(`Station ${station.short_name}: totalTraffic = ${station.totalTraffic}`);
+          // console.log(`Station ${station.short_name}: totalTraffic = ${station.totalTraffic}`);
         });
 
         // Update the visualization
