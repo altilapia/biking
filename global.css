@@ -7,6 +7,76 @@ body {
     box-sizing: border-box;
     margin: auto;
     padding: 1em;
-  }
+}
 
-  
+header {
+    display: flex;
+    gap: 1em;
+    align-items: baseline;
+}
+
+label {
+    margin-left: auto;
+}
+
+#selected-time,
+#any-time {
+    display: block;
+}
+
+#any-time {
+    color: #888;
+    font-style: italic;
+}
+
+#map-container {
+    height: calc(100% - 50px); /* Adjust height to leave space for the title */
+    width: 100%;
+}
+
+svg {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Allow map interactions */
+}
+
+h1 {
+    margin: 20px 0;
+}
+
+circle {
+    fill-opacity: 0.6;
+    stroke: white;
+    stroke-width: 1;
+    pointer-events: auto; /* Allow pointer events on circles */
+    --color-departures: steelblue;
+    --color-arrivals: darkorange;
+    --color: color-mix(
+        in oklch,
+        var(--color-departures) calc(100% * var(--departure-ratio)),
+        var(--color-arrivals)
+    );
+    fill: var(--color);
+}
+
+.legend {
+    display: flex;
+    gap: 1em;
+    margin-block: 1em;
+}
+
+.legend > div {
+    --color-departures: steelblue;
+    --color-arrivals: darkorange;
+    --color: color-mix(
+        in oklch,
+        var(--color-departures) calc(100% * var(--departure-ratio)),
+        var(--color-arrivals)
+    );
+    background-color: var(--color);
+    padding: 0.5em;
+    border-radius: 0.25em;
+}
+
